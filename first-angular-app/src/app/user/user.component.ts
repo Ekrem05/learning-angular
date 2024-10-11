@@ -9,22 +9,20 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class UserComponent {
   @Input({ required: true })
-  id!: string;
-
-  @Input({ required: true })
-  avatar!: string;
-
-  @Input({ required: true })
-  name!: string;
+  user!: {
+    id: string;
+    name: string;
+    avatar: string;
+  };
 
   @Output()
   select = new EventEmitter();
 
   getAvatar() {
-    return 'assets/users/' + this.avatar;
+    return 'assets/users/' + this.user.avatar;
   }
 
   onSelect() {
-    this.select.emit(this.id);
+    this.select.emit(this.user.id);
   }
 }
