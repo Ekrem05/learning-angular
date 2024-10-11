@@ -10,4 +10,8 @@ import { DUMMY_USERS } from '../dummy_users';
 })
 export class UserComponent {
   selectedUser = DUMMY_USERS[Math.floor(Math.random() * DUMMY_USERS.length)];
+
+  get imagePath() {
+    return `assets/users/${this.selectedUser.avatar}`;
+  }
 }
