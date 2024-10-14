@@ -7,15 +7,7 @@ import { NgFor, NgIf } from '@angular/common';
 import { FormComponent } from './tasks/form/form.component';
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [
-    HeaderComponent,
-    UserComponent,
-    TasksComponent,
-    NgFor,
-    NgIf,
-    FormComponent,
-  ],
+
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

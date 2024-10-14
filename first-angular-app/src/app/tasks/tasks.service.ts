@@ -40,7 +40,7 @@ export class TasksService {
       userId: userId,
       dueDate: task.date,
       summary: task.summary,
-      title: task.summary,
+      title: task.title,
     });
   }
 }
