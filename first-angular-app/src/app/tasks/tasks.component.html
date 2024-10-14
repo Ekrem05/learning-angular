@@ -1,0 +1,23 @@
+<app-form
+  *ngIf="showAddTaskForm; else taskDetails"
+  (onCancel)="onCancelForm()"
+  [userId]="userid"
+/>
+<ng-template #taskDetails>
+  <section>
+    <header>
+      <h2>{{ name }}'s Tasks</h2>
+      <menu>
+        <button (click)="onAddTask()">Add Task</button>
+      </menu>
+    </header>
+
+    <ul>
+      @for(task of selectedUserTask;track task.id){
+      <li>
+        <app-task [task]="task" />
+      </li>
+      }
+    </ul>
+  </section>
+</ng-template>
