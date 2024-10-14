@@ -1,0 +1,34 @@
+@if (!data) {
+<p class="center">Please enter parameters for calculation</p>
+} @else {
+<table>
+  <thead>
+    <th>Year</th>
+    <th>Investment Value</th>
+    <th>Interest (Year)</th>
+    <th>Total interst</th>
+    <th>Invested capital</th>
+  </thead>
+  <tbody>
+    @for (row of data; track $index) {
+    <tr>
+      <td>
+        {{ row.year }}
+      </td>
+      <td>
+        {{ row.investmentValue | currency }}
+      </td>
+      <td>
+        {{ row.interest | currency }}
+      </td>
+      <td>
+        {{ row.totalInterest | currency }}
+      </td>
+      <td>
+        {{ row.totalAmountInvested | currency }}
+      </td>
+    </tr>
+    }
+  </tbody>
+</table>
+}
