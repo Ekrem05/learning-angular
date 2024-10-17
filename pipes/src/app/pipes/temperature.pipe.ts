@@ -6,6 +6,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TemperaturePipe implements PipeTransform {
   transform(value: any, ...args: any[]) {
-    return value;
+    return value + '-transformed';
   }
 }
