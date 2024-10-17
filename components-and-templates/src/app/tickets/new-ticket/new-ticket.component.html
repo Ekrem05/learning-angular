@@ -1,0 +1,17 @@
+<form (ngSubmit)="onSubmit(title.value, request.value)" #form>
+  <p>
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title" #title />
+  </p>
+
+  <p>
+    <label for="title">Request</label>
+    <textarea name="request" id="request" rows="3" #request></textarea>
+  </p>
+  <p>
+    <button>
+      <span> Submit </span>
+      <span class="icon"> → </span>
+    </button>
+  </p>
+</form>
