@@ -32,4 +32,7 @@ export class UserPlacesComponent implements OnInit {
       subscription.unsubscribe();
     });
   }
+  removePlace(place: Place) {
+    this.placesService.removeUserPlace(place);
+  }
 }

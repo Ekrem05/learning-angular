@@ -57,5 +57,18 @@ export class PlacesService {
       );
   }
 
-  removeUserPlace(place: Place) {}
+  removeUserPlace(place: Place) {
+    console.log('rem');
+
+    this.httpClient
+      .delete(`http://localhost:3000/user-places/${place.id}`)
+      .pipe(
+        tap({
+          complete: () => {
+            this.loadUserPlaces().subscribe();
+          },
+        })
+      )
+      .subscribe();
+  }
 }
